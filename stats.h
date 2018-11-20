@@ -41,66 +41,67 @@
  * A function that prints the statistics of an array including minimum, 
  * maximum, mean, and median.
  *
- * @param None
+ * @param unsigned char* array       : pointer to data array
+ * @param  int arrayLength : numbers of elements
  *
  * @return None
  */
-void print_statistics();
+void print_statistics(unsigned char* array, int arrayLength);
 /**
  * @brief Print out the array
  *
  * Given an array of data and a length, prints the array to the screen
  *
- * @param *int array       : pointer to data array
+ * @param unsigned char* array       : pointer to data array
  * @param  int arrayLength : numbers of elements
  *
  * @return None
  */
-int print_array(*int array, int arrayLength);
+void print_array(unsigned char* array, int arrayLength);
 /**
  * @brief Find median
  *
  * Given an array of data and a length, returns the median value
  *
- * @param *int array       : pointer to data array
+ * @param unsigned char* array       : pointer to data array
  * @param  int arrayLength : numbers of elements
  *
  * @return median value
  */
-int find_median(*int array, int arrayLength); 
+int find_median(unsigned char* array, int arrayLength);
 /**
  * @brief Find mean
  *
  * Given an array of data and a length, returns the mean
  *
- * @param *int array       : pointer to data array
+ * @param unsigned char* array       : pointer to data array
  * @param  int arrayLength : numbers of elements
  *
  * @return mean value
  */
-int find_mean(*int array, int arrayLength);
+int find_mean(unsigned char* array, int arrayLength);
 /**
  * @brief Find Maximum number
  *
  * Given an array of data and a length, returns the maximum
  *
- * @param *int array       : pointer to data array
+ * @param unsigned char* array       : pointer to data array
  * @param  int arrayLength : numbers of elements
  *
  * @return max value
  */
-int find_maximum(*int array, int arrayLength);
+int find_maximum(unsigned char* array, int arrayLength);
 /**
  * @brief Find Minimum number
  *
  * Given an array of data and a length, returns the minimum
  *
- * @param *int array       : pointer to data array
+ * @param unsigned char* array       : pointer to data array
  * @param  int arrayLength : numbers of elements
  *
  * @return min value
  */
-int find_minimum(*int array, int arrayLength);
+int find_minimum(unsigned char* array, int arrayLength);
 /**
  * @brief Sort the array
  *
@@ -108,11 +109,26 @@ int find_minimum(*int array, int arrayLength);
  * largest to smallest. (The zeroth Element should be the largest value, 
  * and the last element (n-1) should be the smallest value. )
  *
- * @param *int array       : pointer to data array
+ * @param unsigned char* array       : pointer to data array
  * @param  int arrayLength : numbers of elements
  *
  * @return The array that has been sorted
  */
-int sort_array(*int array, int arrayLength);
-
+void sort_array(unsigned char* array, int arrayLength);
+/**
+ * @brief Swap 2 elements
+ *
+ * Swap function using pointer
+ *
+ * @param unsigned char* xp       : Number 1st
+ * @param unsigned char* yp       : Number 2nd
+ *
+ * @return Non
+ */
+void swap(unsigned char* xp, unsigned char* yp) 
+{ 
+    int temp = *xp; 
+    *xp = *yp; 
+    *yp = temp; 
+} 
 #endif /* __STATS_H__ */
