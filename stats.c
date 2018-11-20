@@ -86,11 +86,30 @@ void sort_array( unsigned char* array, int arrayLength) {
 	unsigned char j = 0;
 		for (i = 0; i < arrayLength - 1; i++)
 			for (j = 0; j < arrayLength - i - 1; j ++)
-				if (*(array + j) >= *(array + j + 1)) swap (array + j, array + j + 1);
+				if (*(array + j) <= *(array + j + 1)) swap (array + j, array + j + 1);
 }
 
-int find_min(unsigned char* array, int arrayLength) {return *array;}
-int find_max(unsigned char* array, int arrayLength) {return *(array + arrayLength - 1);}
+/* int find_min(unsigned char* array, int arrayLength) {return *(array + arrayLength - 1);}
+int find_max(unsigned char* array, int arrayLength) {return *array;} */
+int find_min(unsigned char* array, int arrayLength) {
+	unsigned char i = 0;
+	unsigned char min = (*array);
+		for (i = 0; i < arrayLength; i++)
+		{
+			if (min >= *(array + i))  min = *(array + i);
+		}
+	return min;
+}
+int find_max(unsigned char* array, int arrayLength) {
+	unsigned char i = 0;
+	unsigned char max = (*array);
+		for (i = 0; i < arrayLength; i++)
+		{
+			if (max <= *(array + i))  max = *(array + i);
+		}
+	return max;
+}
+
 int find_median(unsigned char* array, int arrayLength) {
 	if ((arrayLength % 2) == 0) return ( *(array + arrayLength/2) + *(array + (arrayLength-2)/2))/2;
 	else return *(array + (arrayLength-1)/2);
