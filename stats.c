@@ -9,13 +9,19 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file <stats.c> 
+ * @brief <Basic statistics>
  *
- * <Add Extended Description Here>
+ * This program implements basic statistical function
+ *                               - Average
+ *                               - Median
+ *                               - Sort
+ *                               - Min
+ *                               - Max
+
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author <Nguyen Van Hoa Vu>
+ * @date <20/11/2018>
  *
  */
 
